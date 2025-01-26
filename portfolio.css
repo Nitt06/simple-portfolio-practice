@@ -32,6 +32,16 @@ header{
     align-items: center;
     z-index: 100;
 }
+.logo{
+    font-size: 3rem;
+    color: #000000;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
 nav {
     margin: 0 auto;
 }
@@ -147,6 +157,29 @@ section#home {
     gap: 8rem;
     background-color: white;
 }
+.home .home-img {
+    border-radius: 50%;
+    order: 2; /* Ensure image is on the right */
+}
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #4b74b7;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.home .home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 1;
+    gap: 2rem;
+}
 .home .home-content h1{
     font-size: 6rem;
     font-weight: 700;
@@ -162,21 +195,6 @@ span{
 }
 .home-content p{
     font-size: 1.6rem;
-}
-.home-img{
-    border-radius: 50%;
-}
-.home-img img{
-    position: relative;
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px solid #4b74b7;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-.home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
 }
 .social-icons a{
     display: inline-flex;
@@ -233,6 +251,12 @@ span{
     .home{
         flex-direction: column;
         margin: 5rem 4rem;
+    }
+    .home .home-content {
+        order: 0; /* Reset order for smaller screens */
+    }
+    .home .home-img {
+        order: 0; /* Reset order for smaller screens */
     }
     .home .home-content h3{
         font-size: 2.5rem;
